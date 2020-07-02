@@ -74,7 +74,7 @@ print("""Ensure the following GPIO connections: R-11, G-13, B-15
 Colors: Red, Green, Blue, Yellow, Cyan, Magenta, and White
 Use the format: color on/color off""")
 
-def main()
+def main():
     while True:
         cmd = input("-->")
 
