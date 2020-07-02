@@ -4,20 +4,20 @@ import time, sys
 import RPi.GPIO as GPIO
 
 redPin = 11   #Set to appropriate GPIO
-greenPin = 15 #Should be set in the 
+greenPin = 15 #Should be set in the
 bluePin = 13  #GPIO.BOARD format
 
 def blink(pin):
     GPIO.setmode(GPIO.BOARD)
-    
+
     GPIO.setup(pin, GPIO.OUT)
     GPIO.output(pin, GPIO.HIGH)
-    
+
 def turnOff(pin):
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin, GPIO.OUT)
     GPIO.output(pin, GPIO.LOW)
-    
+
 def redOn():
     blink(redPin)
 
@@ -69,14 +69,14 @@ def whiteOff():
     turnOff(redPin)
     turnOff(greenPin)
     turnOff(bluePin)
-    
+
 print("""Ensure the following GPIO connections: R-11, G-13, B-15
 Colors: Red, Green, Blue, Yellow, Cyan, Magenta, and White
 Use the format: color on/color off""")
 
-def main():
+def main()
     while True:
-        cmd = raw_input("-->")
+        cmd = input("-->")
 
 
         if cmd == "red on":
@@ -109,10 +109,10 @@ def main():
             whiteOff()
         else:
             print("Not a valid command")
-        
-        
+
+
     return
-    
+
 
 main()
-    
+
